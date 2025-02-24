@@ -17,12 +17,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { ContentWithTheme() }
+        setContent { MainContent() }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun  Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -37,8 +37,9 @@ fun GreetingPreview() {
     }
 }
 
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ContentWithTheme() {
+fun MainContent() {
     ComposeAndCoroutinesDemoTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             Greeting(
