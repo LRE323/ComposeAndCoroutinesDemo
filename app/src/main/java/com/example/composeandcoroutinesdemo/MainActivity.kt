@@ -37,7 +37,9 @@ fun GreetingPreview() {
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true,
+    device = "spec:parent=pixel_7,navigation=buttons"
+)
 @Composable
 fun MainContent() {
     ComposeAndCoroutinesDemoTheme {
