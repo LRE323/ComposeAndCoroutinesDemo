@@ -21,22 +21,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun  Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposeAndCoroutinesDemoTheme {
-        Greeting("Android")
-    }
-}
-
 @Preview(showBackground = true, showSystemUi = true,
     device = "spec:parent=pixel_7,navigation=buttons"
 )
@@ -44,10 +28,7 @@ fun GreetingPreview() {
 fun MainContent() {
     ComposeAndCoroutinesDemoTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            Greeting(
-                name = "Android",
-                modifier = Modifier.padding(innerPadding)
-            )
+            Text("Hola!!!", modifier = Modifier.padding(innerPadding))
         }
     }
 }
